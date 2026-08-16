@@ -1,0 +1,1161 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 105, 180, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(180, 90, 255, 0.18),
+            transparent 30%
+        ),
+        #0d0712;
+}
+
+
+/* ================================
+   BACKGROUND
+================================ */
+
+.background {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.glow {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.35;
+
+    animation: glowMove 10s ease-in-out infinite alternate;
+}
+
+.glow-one {
+    top: -150px;
+    left: -100px;
+
+    background: #ff4f9a;
+}
+
+.glow-two {
+    right: -120px;
+    bottom: -120px;
+
+    background: #9d4edd;
+
+    animation-delay: 2s;
+}
+
+.glow-three {
+    top: 45%;
+    left: 45%;
+
+    width: 200px;
+    height: 200px;
+
+    background: #ff6bcb;
+
+    animation-delay: 4s;
+}
+
+@keyframes glowMove {
+
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(60px, -40px) scale(1.15);
+    }
+}
+
+
+/* ================================
+   FLOATING HEARTS
+================================ */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.hearts span {
+    position: absolute;
+
+    bottom: -50px;
+
+    color: rgba(255, 143, 199, 0.25);
+
+    font-size: 24px;
+
+    animation: floatHeart linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(3) {
+    left: 45%;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(4) {
+    left: 65%;
+    animation-duration: 14s;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(5) {
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(6) {
+    left: 92%;
+    animation-duration: 13s;
+    animation-delay: 5s;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(25deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    position: relative;
+
+    z-index: 10;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* ================================
+   PROGRESS
+================================ */
+
+.progress {
+    display: flex;
+    gap: 7px;
+
+    margin-bottom: 25px;
+}
+
+.progress span {
+    width: 28px;
+    height: 4px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transition: 0.4s ease;
+}
+
+.progress span.active {
+    width: 50px;
+
+    background: #ff76b7;
+
+    box-shadow:
+        0 0 12px rgba(255, 118, 183, 0.6);
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.card {
+    width: min(100%, 620px);
+
+    padding: 55px 50px 45px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.10),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    animation: cardAppear 0.9s ease;
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ================================
+   HEART ICON
+================================ */
+
+.heart-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 105, 180, 0.12);
+
+    border: 1px solid rgba(255, 140, 200, 0.2);
+
+    box-shadow:
+        0 0 35px rgba(255, 105, 180, 0.15);
+
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+.heart-icon span {
+    color: #ff78b8;
+
+    font-size: 28px;
+
+    text-shadow:
+        0 0 20px rgba(255, 120, 184, 0.7);
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* ================================
+   TEXT
+================================ */
+
+.small-text {
+    margin-bottom: 16px;
+
+    color: #ff9ccc;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(36px, 6vw, 58px);
+
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+}
+
+h1 span {
+    display: inline;
+
+    color: #ff85bd;
+
+    text-shadow:
+        0 0 25px rgba(255, 133, 189, 0.3);
+}
+
+.description {
+    margin-top: 24px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.continue-btn {
+    margin-top: 32px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-width: 180px;
+
+    padding: 15px 24px;
+
+    border: none;
+    border-radius: 50px;
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5fa9,
+            #d84cff
+        );
+
+    box-shadow:
+        0 10px 30px rgba(230, 76, 180, 0.3);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.continue-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(230, 76, 180, 0.45);
+}
+
+.continue-btn:active {
+    transform: scale(0.96);
+}
+
+.arrow {
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+.continue-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* ================================
+   HINT
+================================ */
+
+.hint {
+    margin-top: 20px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 12px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    .progress {
+        gap: 4px;
+
+        margin-bottom: 18px;
+    }
+
+    .progress span {
+        width: 18px;
+    }
+
+    .progress span.active {
+        width: 32px;
+    }
+
+    .card {
+        padding: 42px 24px 35px;
+
+        border-radius: 26px;
+    }
+
+    .heart-icon {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(34px, 10vw, 48px);
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .continue-btn {
+        width: 100%;
+    }
+
+    .hint {
+        font-size: 11px;
+    }
+}
+
+/* ================================
+   CARD NAVIGATION
+================================ */
+
+.hidden {
+    display: none;
+}
+
+.card.card-exit {
+    animation: cardExit 0.45s ease forwards;
+}
+
+.card.card-enter {
+    animation: cardEnter 0.65s ease forwards;
+}
+
+@keyframes cardExit {
+
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-25px) scale(0.96);
+    }
+}
+
+@keyframes cardEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ================================
+   CHOICE BUTTONS
+================================ */
+
+.choice-buttons {
+    position: relative;
+
+    min-height: 150px;
+
+    margin-top: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+
+/* YES BUTTON */
+
+.yes-btn,
+.no-btn {
+    min-width: 125px;
+
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.yes-btn {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5fa9,
+            #d84cff
+        );
+
+    box-shadow:
+        0 10px 30px rgba(230, 76, 180, 0.3);
+}
+
+.yes-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 15px 35px rgba(230, 76, 180, 0.45);
+}
+
+.yes-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* NO BUTTON */
+
+.no-btn {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    transition:
+        transform 0.18s ease,
+        background 0.2s ease;
+}
+
+.no-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.10);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .choice-buttons {
+        min-height: 130px;
+
+        gap: 12px;
+    }
+
+    .yes-btn,
+    .no-btn {
+        min-width: 115px;
+
+        padding: 13px 20px;
+    }
+}
+
+/* ========================================
+   LOVE EXPLOSION ❤️
+======================================== */
+
+.love-particle {
+
+    position: fixed;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    color: #ff6fae;
+
+    opacity: 0;
+
+    animation-name: loveExplosion;
+
+    animation-timing-function: ease-out;
+
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes loveExplosion {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.2)
+            rotate(0deg);
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3)
+            rotate(10deg);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--move-x)),
+                calc(-50% + var(--move-y))
+            )
+            scale(0.7)
+            rotate(180deg);
+
+    }
+
+}
+
+/* ========================================
+   DATE OPTIONS
+======================================== */
+
+.date-options {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 28px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+}
+
+
+.date-option {
+
+    min-height: 90px;
+
+    padding: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: white;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.date-option:first-letter {
+    font-size: 25px;
+}
+
+
+.date-option span {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+}
+
+
+.date-option:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+    background:
+        rgba(255, 105, 170, 0.12);
+
+    border-color:
+        rgba(255, 105, 170, 0.35);
+
+    box-shadow:
+        0 15px 35px
+        rgba(220, 60, 150, 0.18);
+
+}
+
+
+.date-option:active {
+
+    transform:
+        scale(0.96);
+
+}
+
+
+@media (max-width: 600px) {
+
+    .date-options {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .date-option {
+
+        min-height: 70px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        padding: 15px 20px;
+
+    }
+
+}
+
+/* ========================================
+   FINAL PROPOSAL CARD 💍
+======================================== */
+
+.final-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.proposal-hearts {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+
+.proposal-hearts span {
+    font-size: 28px;
+    animation: proposalHeart 1.8s ease-in-out infinite;
+}
+
+
+.proposal-hearts span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+
+.proposal-hearts span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes proposalHeart {
+
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.15);
+    }
+
+}
+
+
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+
+.proposal-yes {
+    min-width: 150px;
+    font-size: 17px;
+    padding: 16px 28px;
+}
+
+
+.proposal-no {
+    min-width: 100px;
+}
+
+
+@media (max-width: 600px) {
+
+    .proposal-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .proposal-yes,
+    .proposal-no {
+        width: 100%;
+        max-width: 280px;
+    }
+
+}
+
+/* ========================================
+   PROPOSAL ACCEPTED ❤️
+======================================== */
+
+.proposal-accepted {
+
+    animation:
+        proposalGlow 2s ease-in-out infinite;
+
+}
+
+
+@keyframes proposalGlow {
+
+    0%, 100% {
+
+        box-shadow:
+            0 0 40px
+            rgba(255, 105, 170, 0.15);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 100px
+            rgba(255, 105, 170, 0.35);
+
+    }
+
+}
+
+
+.final-love-screen {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    animation:
+        finalReveal 1s ease forwards;
+
+}
+
+
+@keyframes finalReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.8)
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+.big-heart {
+
+    font-size: 72px;
+
+    margin-bottom: 20px;
+
+    animation:
+        bigHeartBeat 1.2s
+        ease-in-out infinite;
+
+}
+
+
+@keyframes bigHeartBeat {
+
+    0%, 100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+.final-love-screen h1 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.final-love-screen h1 span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 1.25em;
+
+}
+
+
+.final-message {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding: 14px 22px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+.final-message span {
+
+    font-size: 20px;
+
+}
+
+
+.final-message strong {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+}
+
+
+.massive-love {
+
+    z-index: 10000;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .big-heart {
+
+        font-size: 58px;
+
+    }
+
+    .final-message {
+
+        max-width: 90%;
+
+        text-align: center;
+
+    }
+
+}
+
+/* ========================================
+   CARD 13 — LOCKED PAYMENT OPTIONS
+======================================== */
+
+.payment-disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+
+}

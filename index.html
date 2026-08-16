@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Something Special ❤️</title>
+
+    <!-- Love Favicon ❤️ -->
+<link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E❤️%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 01 — You're the luckiest person
+02 — Are you single?
+03 — Do you believe people meet for a reason?
+04 — Can someone make an ordinary day special?
+05 — Sometimes one person changes everything
+06 — Can the right person feel like home?
+07 — Would you let someone who deeply cares stay?
+08 — Someone has a special place for you
+09 — "What if that person is ME?" 😏
+10 — First date? ❤️
+11 — What kind of date?
+12 — Where should we go?
+13 — What should we eat?
+14 — Who's paying? 😂
+15 — After the date...?
+16 — 💍 THE PROPOSAL -->
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Progress -->
+<div class="progress" id="progress">
+
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+        <!-- Card -->
+        <!-- ================================
+     CARD 1
+================================ -->
+
+<section class="card" id="card-1">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Hey, you...
+    </p>
+
+    <h1>
+        So, you are the
+        <span>luckiest person</span>
+        living on Earth right now.
+    </h1>
+
+    <p class="description">
+        And before you ask why...
+        <br>
+        I have something very special to show you.
+    </p>
+
+    <button class="continue-btn" onclick="nextCard()">
+        <span>Continue</span>
+        <span class="arrow">→</span>
+    </button>
+
+    <p class="hint">
+        There are few little steps waiting for you ❤️
+    </p>
+
+</section>
+
+
+<!-- ================================
+     CARD 2
+================================ -->
+
+<section class="card hidden" id="card-2">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Okay... one question
+    </p>
+
+    <h1>
+        Are you
+        <span>single...?</span>
+    </h1>
+
+    <p class="description">
+        Be honest...
+        <br>
+        I'm watching your answer very carefully. 👀
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToNextCard()">
+            Yes ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Choose wisely... 😉
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 3
+================================ -->
+
+<section class="card hidden" id="card-3">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Hmm... interesting ❤️
+    </p>
+
+    <h1>
+        Do you believe
+        <span>people meet for a reason?</span>
+    </h1>
+
+    <p class="description">
+        Sometimes, two people cross paths
+        <br>
+        at exactly the right moment...
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard4()">
+            Yes, I do ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton3">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Think carefully... 👀
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 4
+================================ -->
+
+<section class="card hidden" id="card-4">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Okay... let's get a little deeper 💭
+    </p>
+
+    <h1>
+        Have you ever felt
+        <span>one person</span>
+        can make an ordinary day feel special?
+    </h1>
+
+    <p class="description">
+        Just their presence...
+        <br>
+        their message...
+        <br>
+        or simply knowing they're there. ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard5()">
+            Yes ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton4">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Don't think too much... 👀
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 5
+================================ -->
+
+<section class="card hidden" id="card-5">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Something special... ❤️
+    </p>
+
+    <h1>
+        Sometimes
+        <span>one person</span>
+        changes everything.
+    </h1>
+
+    <p class="description">
+        Maybe they don't even realize
+        <br>
+        how much their presence means.
+    </p>
+
+    <button
+        class="continue-btn"
+        onclick="goToCard6()">
+
+        <span>Continue ❤️</span>
+
+        <span class="arrow">
+            →
+        </span>
+
+    </button>
+
+    <p class="hint">
+        We're getting closer... ✨
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 6
+================================ -->
+
+<section class="card hidden" id="card-6">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        One more little question... 💭
+    </p>
+
+    <h1>
+        Do you think
+        <span>the right person</span>
+        can make you feel at home?
+    </h1>
+
+    <p class="description">
+        Not because of a place...
+        <br>
+        but because of how you feel
+        when you're with them. ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard7()">
+            Yes ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton6">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Your answer matters... 👀
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 7
+================================ -->
+
+<section class="card hidden" id="card-7">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Now... be honest with me ❤️
+    </p>
+
+    <h1>
+        If someone cared
+        <span>about you deeply...</span>
+        would you let them stay?
+    </h1>
+
+    <p class="description">
+        Someone who wants to see you smile,
+        <br>
+        supports your dreams,
+        <br>
+        and chooses you every single day. ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard8()">
+            Yes ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton7">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        There might be someone like that... 👀
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 8
+================================ -->
+
+<section class="card hidden" id="card-8">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Maybe you've figured it out... ❤️
+    </p>
+
+    <h1>
+        What if
+        <span>someone already has</span>
+        a very special place in their heart for you?
+    </h1>
+
+    <p class="description">
+        Someone who thinks about you...
+        <br>
+        smiles because of you...
+        <br>
+        and secretly hopes you stay. ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard9()">
+            I would stay ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton8">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Don't worry... you're almost there. 👀
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 9
+================================ -->
+
+<section class="card hidden" id="card-9">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Okay... enough serious questions 😏
+    </p>
+
+    <h1>
+        So...
+        <span>what if I told you</span>
+        this isn't just a little game?
+    </h1>
+
+    <p class="description">
+        What if every question you've answered
+        <br>
+        has been leading to one very specific person?
+        <br><br>
+        And what if...
+        <br>
+        that person is <strong>me?</strong> ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard10()">
+            I'm listening... 😏❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton9">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Don't look away now... 👀❤️
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 10
+================================ -->
+
+<section class="card hidden" id="card-10">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Since you're still here... 😏❤️
+    </p>
+
+    <h1>
+        Then tell me...
+        <span>what kind of date</span>
+        would you want with me?
+    </h1>
+
+    <p class="description">
+        No wrong answers.
+        <br>
+        Just choose the one that sounds
+        the most like us. ❤️
+    </p>
+
+    <div class="date-options">
+
+        <button
+            class="date-option"
+            onclick="chooseDate('Dinner')">
+            🍝
+            <span>Dinner & Conversation</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="chooseDate('Movie')">
+            🎬
+            <span>Movie & Cuddles</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="chooseDate('Walk')">
+            🌹
+            <span>Long Walk & Talking</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="chooseDate('Adventure')">
+            ✨
+            <span>Something Adventurous</span>
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Choose carefully... I'm taking notes. 👀❤️
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 11
+================================ -->
+
+<section class="card hidden" id="card-11">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Good choice... 😏❤️
+    </p>
+
+    <h1>
+        Now...
+        <span>where are we going?</span>
+    </h1>
+
+    <p class="description">
+        If we're going on our first date,
+        <br>
+        I want to know where you'd feel happiest.
+    </p>
+
+    <div class="date-options">
+
+        <button
+            class="date-option"
+            onclick="choosePlace('Cozy Cafe')">
+            ☕
+            <span>A Cozy Quite Café</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="choosePlace('Rooftop')">
+            🌃
+            <span>Rooftop Dinner</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="choosePlace('Nature')">
+            🌿
+            <span>Somewhere Quiet & Green</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="choosePlace('Surprise')">
+            🎁
+            <span>Surprise Me 😏</span>
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Pick a place... I'll handle the rest. ❤️
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 12
+================================ -->
+
+<section class="card hidden" id="card-12">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        One more important question... 👀
+    </p>
+
+    <h1>
+        And what are you
+        <span>wearing?</span>
+    </h1>
+
+    <p class="description">
+        Because I need to know
+        <br>
+        how much time I'll need to spend
+        deciding what to wear. 😂❤️
+    </p>
+
+    <div class="date-options">
+
+        <button
+            class="date-option"
+            onclick="chooseOutfit('Casual')">
+            😍🥻😍
+            <span>Saree , Red Lipstick , Opened Hair</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="chooseOutfit('Elegant')">
+            😘👗😘
+            <span>Salwar Kameez , Hijab</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="chooseOutfit('Surprise')">
+            🙈🙈🙈
+            <span>Something Elegent</span>
+        </button>
+
+        <button
+            class="date-option"
+            onclick="chooseOutfit('Whatever')">
+            😫😫😫
+            <span>Burka With Niqab</span>
+        </button>
+
+    </div>
+
+    <p class="hint">
+        I'm already imagining it... 👀❤️
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 13
+================================ -->
+
+<section class="card hidden" id="card-13">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Okay... serious business now 😂❤️
+    </p>
+
+    <h1>
+        So...
+        <span>who's paying</span>
+        for our date?
+    </h1>
+
+    <p class="description">
+        Think very carefully before answering...
+        <br>
+        because your answer may affect
+        your dessert. 😏🍰
+    </p>
+
+<div class="date-options">
+
+    <!-- ✅ ONLY THIS ONE IS CLICKABLE -->
+    <button
+        class="date-option"
+        onclick="choosePayment('You')">
+        💳
+        <span>Obviously Me (SHE) 😌</span>
+    </button>
+
+
+    <!-- 🚫 NOT CLICKABLE -->
+    <button
+        class="date-option payment-disabled"
+        type="button"
+        disabled>
+        😏
+        <span>Obviously You (HE)</span>
+    </button>
+
+
+    <!-- 🚫 NOT CLICKABLE -->
+    <button
+        class="date-option payment-disabled"
+        type="button"
+        disabled>
+        🤝
+        <span>We Split It</span>
+    </button>
+
+
+    <!-- 🚫 NOT CLICKABLE -->
+    <button
+        class="date-option payment-disabled"
+        type="button"
+        disabled>
+        😂
+        <span>We'll Fight About It</span>
+    </button>
+
+</div>
+
+    <p class="hint">
+        There is only one correct answer... maybe. 👀❤️
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 14
+================================ -->
+
+<section class="card hidden" id="card-14">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Okay... enough about money. 😂❤️
+    </p>
+
+    <h1>
+        After our date...
+        <span>can we take a long walk?</span>
+    </h1>
+
+    <p class="description">
+        No destination.
+        <br>
+        No rush.
+        <br>
+        Just you, me, and a conversation
+        that we don't want to end. ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToCard15()">
+            I'd love that ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton14">
+            Maybe not 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Careful... I'm getting attached. 🥹❤️
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 15
+================================ -->
+
+<section class="card hidden" id="card-15">
+
+    <div class="heart-icon">
+        <span>♥</span>
+    </div>
+
+    <p class="small-text">
+        Before I ask you something... ❤️
+    </p>
+
+    <h1>
+        I don't want
+        <span>just one date with you.</span>
+    </h1>
+
+    <p class="description">
+        I want the random conversations.
+        <br>
+        The stupid jokes.
+        <br>
+        The late-night talks.
+        <br>
+        The little arguments...
+        <br>
+        and all the beautiful moments in between. ❤️
+    </p>
+
+    <div class="choice-buttons">
+
+        <button
+            class="yes-btn"
+            onclick="goToFinalProposal()">
+            I want that too ❤️
+        </button>
+
+        <button
+            class="no-btn"
+            id="noButton15">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        There's only one thing left to ask... 💗
+    </p>
+
+</section>
+
+<!-- ================================
+     CARD 16 — THE PROPOSAL
+================================ -->
+
+<section class="card hidden final-card" id="card-16">
+
+    <div class="proposal-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+    </div>
+
+    <p class="small-text">
+        So... here we are. ❤️
+    </p>
+
+    <h1>
+        Will you
+        <span>go on a date with me?</span>
+    </h1>
+
+    <p class="description">
+        Not just because I like you...
+        <br><br>
+        but because I genuinely want to know
+        where this beautiful little story
+        could take us.
+        <br><br>
+        Just you and me. ❤️
+    </p>
+
+    <div class="proposal-buttons">
+
+        <button
+            class="yes-btn proposal-yes"
+            onclick="acceptProposal()">
+            YES ❤️
+        </button>
+
+        <button
+            class="no-btn proposal-no"
+            id="finalNoButton">
+            No 😏
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Choose carefully... this one matters. 💗
+    </p>
+
+</section>
+
+
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
