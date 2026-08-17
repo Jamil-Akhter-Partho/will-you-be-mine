@@ -1614,12 +1614,13 @@ function acceptProposal() {
     const card16 =
         document.getElementById("card-16");
 
+    // Love explosion
     createMassiveLoveExplosion();
 
     setTimeout(() => {
 
         card16.innerHTML = `
-        
+
             <div class="final-love-screen">
 
                 <div class="big-heart">
@@ -1645,25 +1646,213 @@ function acceptProposal() {
                     and our first date. 🌹
                 </p>
 
+                <button
+                    class="continue-btn"
+                    onclick="startLoveEnding()">
+
+                    <span>Continue ❤️</span>
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </div>
+
+        `;
+
+    }, 800);
+
+}
+
+/* ========================================
+   START SPECIAL ENDING ❤️
+======================================== */
+
+function startLoveEnding() {
+
+    showEndingCard(1);
+
+}
+
+/* ========================================
+   FOUR SPECIAL ENDING CARDS
+======================================== */
+
+function showEndingCard(number) {
+
+    const card =
+        document.getElementById("card-16");
+
+
+    /* ================================
+       CARD 1 — LINE
+    ================================= */
+
+    if (number === 1) {
+
+        card.innerHTML = `
+
+            <div class="special-ending-card">
+
+                <div class="ending-heart">
+                    🛣️
+                </div>
+
+                <p class="small-text">
+                    First...
+                </p>
+
+                <h1>
+                    This is
+                    <span>LINE 🛣️</span>
+                </h1>
+
+                <button
+                    class="continue-btn"
+                    onclick="showEndingCard(2)">
+
+                    <span>Next ❤️</span>
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* ================================
+       CARD 2 — NINE
+    ================================= */
+
+    else if (number === 2) {
+
+        card.innerHTML = `
+
+            <div class="special-ending-card">
+
+                <div class="ending-heart">
+                    9️⃣
+                </div>
+
+                <p class="small-text">
+                    Then...
+                </p>
+
+                <h1>
+                    This is
+                    <span>NINE 9️⃣</span>
+                </h1>
+
+                <button
+                    class="continue-btn"
+                    onclick="showEndingCard(3)">
+
+                    <span>Next ❤️</span>
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* ================================
+       CARD 3 — WINE
+    ================================= */
+
+    else if (number === 3) {
+
+        card.innerHTML = `
+
+            <div class="special-ending-card">
+
+                <div class="ending-heart">
+                    🍷
+                </div>
+
+                <p class="small-text">
+                    And then...
+                </p>
+
+                <h1>
+                    This IS
+                    <span>WINE 🍷</span>
+                </h1>
+
+                <button
+                    class="continue-btn"
+                    onclick="showEndingCard(4)">
+
+                    <span>One More ❤️</span>
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* ================================
+       CARD 4 — MINE ❤️
+    ================================= */
+
+    else if (number === 4) {
+
+        card.innerHTML = `
+
+            <div class="special-ending-card final-ending">
+
+                <div class="ending-heart">
+                    💕
+                </div>
+
+                <p class="small-text">
+                    And finally...
+                </p>
+
+                <h1>
+                    You're
+                    <span>MINE 💕</span>
+                </h1>
+
+                <p class="description">
+                    Maybe this was
+                    <br>
+                    all leading to this...
+                    <br><br>
+                    You're Mine. ❤️
+                </p>
+
                 <div class="final-message">
+
                     <span>♡</span>
+
                     <strong>
-                        See you soon, beautiful.
+                        This is only the beginning.
                     </strong>
+
                     <span>♡</span>
+
                 </div>
 
             </div>
 
         `;
 
-        card16.classList.add(
-            "proposal-accepted"
-        );
+        createFinalHeartRain();
 
-    }, 800);
+    }
 
 }
+
 
 /* ========================================
    MASSIVE LOVE EXPLOSION 💗
@@ -1869,3 +2058,283 @@ function moveFinalNoButton() {
         )`;
 
 }
+
+/* ========================================
+   START THE SPECIAL ENDING ❤️
+======================================== */
+
+function startLoveEnding() {
+
+    const card16 =
+        document.getElementById("card-16");
+
+    card16.innerHTML = `
+
+        <div class="special-ending-card">
+
+            <div class="ending-heart">
+                🛣️
+            </div>
+
+            <p class="small-text">
+                First...
+            </p>
+
+            <h1>
+                This is
+                <span>LINE 🛣️</span>
+            </h1>
+
+            <button
+                class="continue-btn"
+                onclick="showEndingCard(3)">
+
+                <span>Next ❤️</span>
+                <span class="arrow">→</span>
+
+            </button>
+
+        </div>
+
+    `;
+
+}
+
+/* ========================================
+   AFTER THE PROPOSAL ❤️
+======================================== */
+
+function showEndingCard(number) {
+
+    const card16 =
+        document.getElementById("card-16");
+
+
+    /* ================================
+       NINE
+    ================================= */
+
+    if (number === 3) {
+
+        card16.innerHTML = `
+
+            <div class="special-ending-card">
+
+                <div class="ending-heart">
+                    9️⃣
+                </div>
+
+                <p class="small-text">
+                    Then...
+                </p>
+
+                <h1>
+                    This is
+                    <span>NINE 9️⃣</span>
+                </h1>
+
+                <button
+                    class="continue-btn"
+                    onclick="showEndingCard(4)">
+
+                    <span>Next ❤️</span>
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* ================================
+       WINE
+    ================================= */
+
+    else if (number === 4) {
+
+        card16.innerHTML = `
+
+            <div class="special-ending-card">
+
+                <div class="ending-heart">
+                    🍷
+                </div>
+
+                <p class="small-text">
+                    And then...
+                </p>
+
+                <h1>
+                    This IS
+                    <span>WINE 🍷</span>
+                </h1>
+
+                <button
+                    class="continue-btn"
+                    onclick="showEndingCard(5)">
+
+                    <span>One More ❤️</span>
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* ================================
+       MINE ❤️
+    ================================= */
+
+    else if (number === 5) {
+
+        card16.innerHTML = `
+
+            <div class="special-ending-card final-ending">
+
+                <div class="ending-heart">
+                    💕
+                </div>
+
+                <p class="small-text">
+                    And finally...
+                </p>
+
+                <h1>
+                    You're
+                    <span>MINE 💕</span>
+                </h1>
+
+                <p class="description">
+                    Maybe this was
+                    <br>
+                    all leading to this...
+                    <br><br>
+                    You're Mine. ❤️
+                </p>
+
+                <div class="final-message">
+
+                    <span>♡</span>
+
+                    <strong>
+                        This is only the beginning.
+                    </strong>
+
+                    <span>♡</span>
+
+                </div>
+
+            </div>
+
+        `;
+
+        createFinalHeartRain();
+
+    }
+
+}
+
+
+function createFinalHeartRain() {
+
+    for (let i = 0; i < 90; i++) {
+
+        const heart =
+            document.createElement("span");
+
+
+        heart.classList.add(
+            "love-particle",
+            "final-rain-heart"
+        );
+
+
+        const symbols = [
+            "❤️",
+            "💗",
+            "💖",
+            "💕",
+            "💘",
+            "♡",
+            "♥"
+        ];
+
+
+        heart.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+
+        /* Random horizontal position */
+
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+
+        /* Start above screen */
+
+        heart.style.top =
+            (-10 -
+                Math.random() * 30) + "%";
+
+
+        /* Random size */
+
+        heart.style.fontSize =
+            15 +
+            Math.random() * 30 +
+            "px";
+
+
+        /* Different falling speeds */
+
+        heart.style.animationDuration =
+            3 +
+            Math.random() * 4 +
+            "s";
+
+
+        /* Random delay */
+
+        heart.style.animationDelay =
+            Math.random() * 3 +
+            "s";
+
+
+        /* Slight horizontal drift */
+
+        heart.style.setProperty(
+            "--drift",
+            (
+                Math.random() * 160 -
+                80
+            ) + "px"
+        );
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 9000);
+
+    }
+
+}
+
