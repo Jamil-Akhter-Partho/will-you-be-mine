@@ -1633,7 +1633,7 @@ function acceptProposal() {
 
                 <h1>
                     It's a
-                    <span>DATE! ❤️ Sabiha Tonni</span>
+                    <span>DATE! ❤️</span>
                 </h1>
 
                 <p class="description">
